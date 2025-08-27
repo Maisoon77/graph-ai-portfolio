@@ -132,6 +132,11 @@
       nav a{ margin-left:14px; }
       .weeks{ grid-template-columns: 1fr; }
     }
+    /* Circular avatar styling */
+    .avatar{ width:48px; height:48px; border-radius:999px; object-fit:cover; border:2px solid transparent; 
+      background: linear-gradient(var(--bg-1), var(--bg-1)) padding-box, linear-gradient(135deg, var(--brand-2), var(--brand-1), var(--brand-3)) border-box; 
+      box-shadow: 0 8px 20px rgba(0,0,0,.35); }
+    @media (max-width: 520px){ .avatar{ width:42px; height:42px; } }
   </style>
 </head>
 <body>
@@ -140,7 +145,7 @@
   <header>
     <div class="wrap nav">
       <a class="brand" href="#top" aria-label="Home">
-        <div class="logo" aria-hidden="true"></div>
+        <img class="avatar" src="https://raw.githubusercontent.com/Maisoon77/graph-ai-portfolio/main/Screenshot%202025-08-02%20123442.png" alt="Portrait of Maisoon" loading="eager" width="48" height="48" />
         <h1>Maisoon • Generative AI for Work & Research</h1>
       </a>
       <nav aria-label="Primary">
@@ -174,9 +179,9 @@
       <aside class="hero-card" aria-label="Quick facts">
         <h3 class="section-title" style="margin:0 0 8px; font-size:22px;">Quick Facts</h3>
         <ul>
-          <li><strong>Focus:</strong> Generative AI for literature review, data workflows, and research communication.</li>
-          <li><strong>Region Experience:</strong> Eastern Europe, Central Asia, and Asia Pacific.</li>
-          <li><strong>Background:</strong> Medicine & health policy; strengthening systems in fragile contexts.</li>
+          <li><strong>Focus:</strong> Generative AI for South–South cooperation and operationalizing health system resilience.</li>
+          <li><strong>Region Experience:</strong> Middle East &amp; North Africa; Eastern &amp; Southern Africa; Asia; Asia Pacific.</li>
+          <li><strong>Background:</strong> Medicine &amp; health policy and planning; operationalizing health systems resilience in fragile contexts.</li>
           <li><strong>Collaboration:</strong> Governments, multilaterals, and civil society.</li>
         </ul>
       </aside>
