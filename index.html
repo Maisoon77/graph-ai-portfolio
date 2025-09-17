@@ -4,7 +4,7 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Maisoon — Generative AI for Work & Research</title>
-  <meta name="description" content="Maisoon's one‑page portfolio for the Generative AI for Work & Research course: about, course overview, and weekly submissions." />
+  <meta name="description" content="Maisoon's one-page portfolio for the Generative AI for Work & Research course: about, course overview, and weekly submissions." />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;800&family=Fraunces:opsz,wght@9..144,600;9..144,700&display=swap" rel="stylesheet">
@@ -132,11 +132,30 @@
       nav a{ margin-left:14px; }
       .weeks{ grid-template-columns: 1fr; }
     }
+
     /* Circular avatar styling */
-    .avatar{ width:48px; height:48px; border-radius:999px; object-fit:cover; border:2px solid transparent; 
-      background: linear-gradient(var(--bg-1), var(--bg-1)) padding-box, linear-gradient(135deg, var(--brand-2), var(--brand-1), var(--brand-3)) border-box; 
+    .avatar{ width:48px; height:48px; border-radius:999px; object-fit:cover; border:2px solid transparent;
+      background: linear-gradient(var(--bg-1), var(--bg-1)) padding-box, linear-gradient(135deg, var(--brand-2), var(--brand-1), var(--brand-3)) border-box;
       box-shadow: 0 8px 20px rgba(0,0,0,.35); }
     @media (max-width: 520px){ .avatar{ width:42px; height:42px; } }
+
+    /* Consultation form embed */
+    .form-embed{
+      background: var(--glass);
+      border:1px solid rgba(255,255,255,.08);
+      border-radius: var(--radius-lg);
+      box-shadow: var(--shadow);
+      overflow:hidden;
+    }
+    .form-embed iframe{
+      width:100%;
+      height: 900px; /* tall for comfortable scrolling */
+      border:0;
+      display:block;
+    }
+    @media (max-width: 520px){
+      .form-embed iframe{ height: 980px; } /* extra space on small screens */
+    }
   </style>
 </head>
 <body>
@@ -152,6 +171,7 @@
         <a href="#about">About</a>
         <a href="#course">Course</a>
         <a href="#submissions">Weekly Submissions</a>
+        <a href="#contact">Consultation</a>
       </nav>
     </div>
   </header>
@@ -162,7 +182,7 @@
       <div>
         <div class="kicker">Portfolio</div>
         <h2 id="hero-title" class="title">Maisoon — <span class="grad">Senior Advisor, The Global Fund</span></h2>
-        <p class="subtitle">Bridging health systems resilience and policy with pragmatic, no‑code AI for research, analysis and communication.</p>
+        <p class="subtitle">Bridging health systems resilience and policy with pragmatic, no-code AI for research, analysis and communication.</p>
         <div class="cta">
           <a class="btn primary" href="#course" title="Jump to course overview" aria-label="About the course">
             <!-- arrow icon -->
@@ -190,9 +210,9 @@
     <!-- ABOUT ME -->
     <section id="about" aria-labelledby="about-title">
       <div class="section-kicker">About me</div>
-      <h3 id="about-title" class="section-title">Health systems strategist exploring AI‑augmented research</h3>
+      <h3 id="about-title" class="section-title">Health systems strategist exploring AI-augmented research</h3>
       <p class="lead">
-        Maisoon is a Senior Advisor at The Global Fund with more than a decade of experience leading and advising large‑scale health initiatives across Eastern Europe, Central Asia, and the Asia Pacific. Trained in medicine and health policy, she helps strengthen health systems by identifying programmatic risks and designing resilient, sustainable solutions in fragile contexts. She works with governments, multilateral organizations, and civil society to shape impactful programs that advance universal health coverage. Passionate about equity and sustainability, she builds partnerships, mobilizes resources, and creates collaborative frameworks that empower communities and improve access to essential services. Today, she is applying generative AI to accelerate research workflows, synthesis, and communication while keeping rigor, ethics, and inclusion at the core.
+        Maisoon is a Senior Advisor at The Global Fund with more than a decade of experience leading and advising large-scale health initiatives across Eastern Europe, Central Asia, and the Asia Pacific. Trained in medicine and health policy, she helps strengthen health systems by identifying programmatic risks and designing resilient, sustainable solutions in fragile contexts. She works with governments, multilateral organizations, and civil society to shape impactful programs that advance universal health coverage. Passionate about equity and sustainability, she builds partnerships, mobilizes resources, and creates collaborative frameworks that empower communities and improve access to essential services. Today, she is applying generative AI to accelerate research workflows, synthesis, and communication while keeping rigor, ethics, and inclusion at the core.
       </p>
       <div class="cta" style="margin-top:14px;">
         <!-- Replace the # below with your public LinkedIn URL (e.g., https://www.linkedin.com/in/your-handle) -->
@@ -208,7 +228,7 @@
     <section id="course" aria-labelledby="course-title">
       <div class="section-kicker">About the course</div>
       <h3 id="course-title" class="section-title">Generative AI for Work & Research — Overview</h3>
-      <p class="lead">An immersive, <strong>8‑week live cohort</strong> (≈2 months) focused on practical, no‑code AI tools for automating research tasks, analyzing data, and communicating results. The bootcamp blends live workshops, hands‑on assignments, and a capstone showcase.</p>
+      <p class="lead">An immersive, <strong>8-week live cohort</strong> (≈2 months) focused on practical, no-code AI tools for automating research tasks, analyzing data, and communicating results. The bootcamp blends live workshops, hands-on assignments, and a capstone showcase.</p>
 
       <div class="grid cols-3" style="margin-top:18px;">
         <div class="card">
@@ -221,13 +241,13 @@
         </div>
         <div class="card">
           <h4>Outcomes</h4>
-          <p>Build AI‑assisted research workflows, craft data/communication assets, and present a capstone solution with peer and instructor feedback.</p>
+          <p>Build AI-assisted research workflows, craft data/communication assets, and present a capstone solution with peer and instructor feedback.</p>
         </div>
       </div>
 
       <div style="margin-top:26px; display:flex; align-items:center; justify-content:space-between; gap:12px;">
-        <span class="pill">No‑code tools • LLMs • Automation • RAG • Visualization • Dashboards • Docs & Presentations</span>
-        <span class="badge">2‑Month Cohort</span>
+        <span class="pill">No-code tools • LLMs • Automation • RAG • Visualization • Dashboards • Docs & Presentations</span>
+        <span class="badge">2-Month Cohort</span>
       </div>
 
       <h4 style="margin:26px 0 12px;">Modules</h4>
@@ -237,7 +257,7 @@
           <p>Create structured research documents (Markdown, LaTeX, HTML), build simple sites, and design clear slides with AI assistants.</p>
         </article>
         <article class="module">
-          <h5>Module 2 — AI‑Automated Data Analysis</h5>
+          <h5>Module 2 — AI-Automated Data Analysis</h5>
           <p>Analyze datasets, transform files, and generate automated reports/dashboards using tools like ChatGPT Code Interpreter and Julius.</p>
         </article>
         <article class="module">
@@ -246,11 +266,11 @@
         </article>
         <article class="module">
           <h5>Module 4 — Custom GPTs & Chatbots</h5>
-          <p>Design assistants with context windows, RAG, and knowledge base integration; prototype task‑specific chatbots.</p>
+          <p>Design assistants with context windows, RAG, and knowledge base integration; prototype task-specific chatbots.</p>
         </article>
         <article class="module">
           <h5>Module 5 — AI for Task Automation</h5>
-          <p>Set up email/response automations, browser‑control agents, and multi‑step flows to offload repetitive research tasks.</p>
+          <p>Set up email/response automations, browser-control agents, and multi-step flows to offload repetitive research tasks.</p>
         </article>
         <article class="module">
           <h5>Module 6 — Communication & Outreach</h5>
@@ -269,7 +289,7 @@
         </div>
         <div class="card">
           <h4>Support & Community</h4>
-          <p style="margin:8px 0 0;">Expect weekly live workshops, small‑group help sessions, a supportive forum, and personalized feedback to keep momentum and depth.</p>
+          <p style="margin:8px 0 0;">Expect weekly live workshops, small-group help sessions, a supportive forum, and personalized feedback to keep momentum and depth.</p>
         </div>
       </div>
     </section>
@@ -278,7 +298,7 @@
     <section id="submissions" aria-labelledby="subs-title">
       <div class="section-kicker">My weekly work</div>
       <h3 id="subs-title" class="section-title">Weekly Submissions</h3>
-      <p class="lead">Each card will link to a live artifact (notebook, site, dashboard, or write‑up). Placeholders below — we’ll add URLs as pieces are finalized.</p>
+      <p class="lead">Each card will link to a live artifact (notebook, site, dashboard, or write-up). Placeholders below — we’ll add URLs as pieces are finalized.</p>
 
       <div class="weeks" style="margin-top:14px;">
         <!-- TEMPLATE: Replace # with the final link when ready. -->
@@ -324,6 +344,30 @@
         </div>
       </div>
     </section>
+
+    <!-- CONTACT / CONSULTATION -->
+    <section id="contact" aria-labelledby="contact-title">
+      <div class="section-kicker">Contact</div>
+      <h3 id="contact-title" class="section-title">Contact for Consultation</h3>
+      <p class="lead">
+        Interested in a consultation on health systems resilience, policy, or AI-augmented research workflows? Send a request below and I’ll follow up with next steps.
+      </p>
+
+      <div class="form-embed" aria-label="Consultation request form">
+        <iframe
+          src="https://docs.google.com/forms/d/e/1FAIpQLSfs1eX1Ydv2Ts_sp9uqqXueV89MGl_HCcO5kxRzLVghxU6oog/viewform?embedded=true"
+          title="Consultation request form"
+          loading="lazy"
+          marginheight="0"
+          marginwidth="0">
+          Loading…
+        </iframe>
+      </div>
+
+      <p class="note" style="margin-top:10px;">
+        Your responses are processed via Google Forms. Please avoid sharing sensitive personal information.
+      </p>
+    </section>
   </main>
 
   <footer>
@@ -335,17 +379,4 @@
       <div class="socials">
         <!-- Replace with your public LinkedIn URL -->
         <a href="#" target="_blank" rel="noopener" title="LinkedIn">
-          <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="currentColor" d="M4.98 3.5A2.5 2.5 0 0 1 7.5 6 2.5 2.5 0 1 1 4.98 3.5zM3 8.98h3v12H3zM10 9h2.88v1.64h.04C13.54 9.7 14.8 9 16.45 9 20 9 21 11.34 21 14.59V21h-3v-5.2c0-1.24-.02-2.83-1.73-2.83-1.74 0-2 1.36-2 2.74V21h-3V9z"/></svg>
-          LinkedIn
-        </a>
-      </div>
-    </div>
-  </footer>
-
-  <button class="to-top" aria-label="Scroll to top" title="Back to top" onclick="window.scrollTo({top:0, behavior:'smooth'})">
-    <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path d="M12 19V5m0 0l-7 7m7-7l7 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-  </button>
-<script src="https://cdn.botpress.cloud/webchat/v3.2/inject.js" defer></script>
-<script src="https://files.bpcontent.cloud/2025/09/10/15/20250910151821-VR3YWFYH.js" defer></script>
-</body>
-</html>
+          <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="currentColor" d="M4.98 3.5A2.5 2.5 0 0 1 7.5 6 2.5 2.5 0 1 1 4.98 3.5zM3 8.98h3v12H3zM10
